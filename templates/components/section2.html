@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/section.css') }}">
+
+<div class="equiment-container">
+    <div class="slide-section">
+        {% for equipment in equipments %}
+        <div class="equipments">
+            <section class="equipment-img">
+                 
+            </section>
+            <section class="equipment-name">
+                <h2>{{ equipment['EquipmentName'] }}</h2>
+            </section>
+        </div>
+        {% endfor %}
+    </div>
+</div>

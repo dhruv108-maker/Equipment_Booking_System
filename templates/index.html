@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | LEBS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+    {% block flaskMessage %}
+    {% include 'components/flash.html' %}
+    {% endblock %}
+    {% block navbar %}
+    {% include 'components/navbar.html' %}
+    {% endblock %}
+    <main>
+        <section class="bg-img" id="bg-img-1"></section>
+        <div class="title"><h3>Life Science</h3></div>
+        <section class="lab-section">
+            {% block Section1 %}
+            {% include 'components/section1.html' %}
+            {% endblock %}
+        </section>
+        <div class="title"><h3>Chemical Science</h3></div>
+        <section class="lab-section">
+            {% block Section2 %}
+            {% include 'components/section2.html' %}
+            {% endblock %}
+        </section>
+    </main>
+    {% block footer %}
+    {% include 'components/footer.html' %}
+    {% endblock %}
+</body>
+</html>
